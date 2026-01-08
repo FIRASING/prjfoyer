@@ -38,7 +38,10 @@ public class BlocController {
     }
 
     // Order 4
-
+    @DeleteMapping("blocs/delete/{idBloc}")
+    public void deletingBloc(@PathVariable("idBloc") long idBloc){
+        blocService.deleteBloc(idBloc);
+    }
 
     // Order 5
     @PutMapping("blocs/update")
