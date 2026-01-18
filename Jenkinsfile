@@ -1,17 +1,11 @@
 pipeline {
     agent any
 
-    tools {
-        jdk 'JDK17'
-        maven 'Maven'
-    }
-
     environment {
         SPRING_PROFILES_ACTIVE = 'test'
     }
 
     stages {
-
         stage('Checkout') {
             steps {
                 git branch: 'main',
@@ -39,7 +33,7 @@ pipeline {
             echo 'CI pipeline SUCCESS ✅'
         }
         failure {
-            echo 'CI pipeline FAILED ❌ t '
+            echo 'CI pipeline FAILED ❌'
         }
     }
 }
