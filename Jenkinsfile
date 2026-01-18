@@ -36,7 +36,7 @@ pipeline {
 
     post {
         success {
-            echo 'CI pipeline SUCCESS ✅'
+            echo 'CI pipeline SUCCESS wlh✅'
         }
         failure {
             echo 'CI pipeline FAILED ❌'
